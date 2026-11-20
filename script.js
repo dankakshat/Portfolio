@@ -1,7 +1,7 @@
 /* Edit this object to personalize the site. Leave a URL as '#' to hide its destination. */
 const portfolio = {
-  name: 'Your Name',
-  handle: '@yourhandle',
+  name: 'Akshat Awasthi',
+  handle: '@dankakshat',
   skills: ['Creative direction', 'UI / UX design', 'Front-end development', 'Brand systems', 'Motion design', 'Worldbuilding'],
   projects: [
     { title: 'Nocturne', description: 'A cinematic identity and responsive digital home for a story-led creative project.', tags: ['Branding', 'Web design'], url: '#' },
