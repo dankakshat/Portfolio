@@ -9,10 +9,10 @@ const portfolio = {
     { title: 'Afterimage', description: 'A visual system and launch space for work that lives between digital craft and art direction.', tags: ['Art direction', 'Code'], url: '#' }
   ],
   social: [
-    { label: 'Email', url: 'mailto:hello@example.com' },
-    { label: 'GitHub', url: '#' },
-    { label: 'LinkedIn', url: '#' },
-    { label: 'Instagram', url: '#' }
+    { label: 'Email', url: 'mailto:akshatorignal@gmail.com' },
+    { label: 'GitHub', url: 'https://github.com/dankakshat' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/dankakshat/' },
+    { label: 'Instagram', url: 'instagram.com/dankakshat' }
   ]
 };
 
