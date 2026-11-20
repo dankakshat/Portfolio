@@ -3,25 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1c1e21" />
-    <title>NEXUS — The Divine Archive</title>
-    <style>
-      html,body,#root{width:100%;height:100%;margin:0}body{background:#1c1e21;color:#efe8da;font-family:Georgia,serif}.archive-fallback{min-height:100%;overflow:hidden;position:relative;isolation:isolate;background:radial-gradient(circle at 50% 31%,#4b4c4c 0,#222426 37%,#121315 72%,#060707 100%)}.archive-fallback:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090a0b 0%,transparent 25%,transparent 74%,#090a0b 100%);pointer-events:none;z-index:-1}.archive-fallback.lite{filter:saturate(.55)}.archive-fallback.cinematic{background:radial-gradient(circle at 50% 31%,#675235 0,#25201b 38%,#0c0b0a 75%)}.fallback-angel{position:absolute;width:min(65vw,680px);height:min(74vh,760px);object-fit:contain;left:50%;bottom:0;transform:translateX(-50%);filter:grayscale(.65) contrast(1.05) brightness(.78);mix-blend-mode:screen;opacity:.8;z-index:-2;transition:transform .65s ease}.fallback-header{display:flex;justify-content:space-between;align-items:center;padding:28px clamp(22px,5vw,72px);font:10px/1.4 ui-monospace,monospace;letter-spacing:.17em}.fallback-brand{display:grid;gap:5px}.fallback-brand span:last-child{color:#cbb178;font-size:9px}.fallback-quality{border:1px solid #9e8a5f;background:#151515aa;color:#e5d1a2;padding:8px 12px;text-transform:uppercase;font:9px ui-monospace,monospace;letter-spacing:.12em;cursor:pointer}.fallback-copy{position:absolute;left:clamp(22px,7vw,120px);bottom:140px}.fallback-copy p{font:10px ui-monospace,monospace;letter-spacing:.16em;color:#cbb178}.fallback-copy h1{font-size:clamp(3rem,8vw,7.5rem);font-weight:500;line-height:.79;letter-spacing:-.075em;margin:16px 0}.fallback-copy i{color:#b89553}.fallback-copy small{font:10px ui-monospace,monospace;color:#cac0ae;letter-spacing:.06em}.fallback-nav{position:absolute;z-index:2;display:flex;gap:6px;align-items:center;left:clamp(16px,4vw,70px);right:clamp(16px,4vw,70px);bottom:26px;padding:12px 15px;overflow:auto;border:1px solid #8c837244;background:#171818e6;font:10px ui-monospace,monospace;letter-spacing:.08em;color:#c4bcae}.fallback-nav b{color:#c19b56;font-size:9px}.fallback-nav button{border:0;border-left:1px solid #8d7b5f44;padding:8px 16px;background:transparent;color:#c4bcae;white-space:nowrap;font:inherit;cursor:pointer}.fallback-nav button:hover,.fallback-nav button.active{background:#96783d22;color:#f2d892}@media(max-width:600px){.fallback-copy{bottom:145px}.fallback-nav{bottom:14px}.fallback-nav b{display:none}.fallback-copy h1{font-size:3.3rem}.fallback-angel{width:120vw;opacity:.64}}
-    </style>
-    <style>
-      .fallback-angel{animation:angel-drift 9s ease-in-out infinite}.archive-fallback:before{content:"";position:absolute;left:50%;top:48%;width:min(66vw,720px);height:min(43vw,470px);border:1px solid #b9955050;border-radius:50%;transform:translate(-50%,-50%) rotateX(68deg);box-shadow:0 0 55px #b98c3744;z-index:-1}.archive-orbit{position:absolute;inset:0;pointer-events:none;z-index:1}.archive-card{position:absolute;width:clamp(78px,10vw,160px);aspect-ratio:3/4;object-fit:cover;border:1px solid #cfb87977;box-shadow:0 18px 45px #000b;opacity:.68;filter:saturate(.62) contrast(1.1);animation:relic-orbit 14s linear infinite}.archive-card.one{left:21%;top:26%;animation-delay:-3s}.archive-card.two{right:19%;top:19%;animation-delay:-9s;animation-direction:reverse}.archive-card.three{right:22%;bottom:20%;animation-delay:-5s}.archive-card.four{left:24%;bottom:19%;animation-delay:-11s;animation-direction:reverse}@keyframes angel-drift{0%,100%{transform:translateX(-50%) perspective(900px) rotateY(-5deg) translateY(0)}50%{transform:translateX(-50%) perspective(900px) rotateY(6deg) translateY(-16px)}}@keyframes relic-orbit{0%{transform:perspective(800px) rotateY(-22deg) rotateZ(-7deg) translateY(0)}50%{transform:perspective(800px) rotateY(26deg) rotateZ(7deg) translateY(-44px)}100%{transform:perspective(800px) rotateY(-22deg) rotateZ(-7deg) translateY(0)}}@media(max-width:700px){.archive-card{width:78px}.archive-card.one{left:7%;top:25%}.archive-card.two{right:5%;top:22%}.archive-card.three{right:7%;bottom:26%}.archive-card.four{left:8%;bottom:25%}}
-    </style>
+    <meta name="description" content="A gothic fantasy portfolio." />
+    <title>Crimson Shrine — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <main class="archive-fallback" aria-label="Nexus Divine Archive">
-        <img class="fallback-angel" src="./public/images/angel-ruins-reference.png" alt="Marble angel in ruined temple" />
-        <div class="archive-orbit" aria-hidden="true"><img class="archive-card one" src="./public/images/celestial-moodboard-one.png" alt="" /><img class="archive-card two" src="./public/images/celestial-moodboard-two.png" alt="" /><img class="archive-card three" src="./public/images/angel-ruins-reference.png" alt="" /><img class="archive-card four" src="./public/images/celestial-moodboard-one.png" alt="" /></div>
-        <header class="fallback-header"><div class="fallback-brand"><span>✦ NEXUS — THE DIVINE ARCHIVE</span><span>ENTER THE UNKNOWN</span></div><button class="fallback-quality" type="button">balanced</button></header>
-        <section class="fallback-copy" aria-live="polite"><p>01 / THE ATRIUM</p><h1>THE DIVINE<br><i>ARCHIVE</i></h1><small>Choose a location to begin exploring.</small></section>
-        <nav class="fallback-nav" aria-label="Locations"><b>LOCATIONS</b><button type="button" data-location="Identity">Identity</button><button type="button" data-location="Projects">Projects</button><button type="button" data-location="Skills">Skills</button><button type="button" data-location="Experience">Experience</button><button type="button" data-location="Laboratory">Laboratory</button><button type="button" data-location="Contact">Contact</button></nav>
-      </main>
-    </div>
-    <script type="module" src="./src/bootstrap.js"></script>
+    <video class="background-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="background.mp4" type="video/mp4" />
+    </video>
+    <div class="backdrop" aria-hidden="true"></div>
+    <canvas id="snow" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Crimson Shrine home"><span>✦</span> CRIMSON SHRINE</a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Play ambient music">
+        <span aria-hidden="true">♫</span><span class="sound-label">Sound off</span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="sigil sigil-one" aria-hidden="true">✧</div>
+        <div class="profile-card ornamented">
+          <div class="card-corner top-left"></div><div class="card-corner top-right"></div>
+          <div class="card-corner bottom-left"></div><div class="card-corner bottom-right"></div>
+          <div class="avatar-wrap"><img src="avatar.jpg" alt="Portrait of Your Name" onerror="this.style.display='none';this.parentElement.classList.add('avatar-fallback')" /><span class="avatar-initials">YN</span></div>
+          <p class="eyebrow">Digital creator · 01</p>
+          <h1>Your Name</h1>
+          <p class="handle">@yourhandle</p>
+          <p class="tagline">I build small worlds, sharp experiences, and work worth remembering.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View the archive <span>→</span></a>
+            <a class="button ghost" href="#contact">Send a signal</a>
+          </div>
+          <div class="scroll-cue" aria-hidden="true"><span></span> scroll to explore</div>
+        </div>
+        <div class="sigil sigil-two" aria-hidden="true">✦</div>
+      </section>
+
+      <section id="about" class="section content-section reveal">
+        <p class="section-kicker">I. The bearer</p>
+        <div class="section-heading"><h2>Behind the veil</h2><span class="rule"></span></div>
+        <div class="about-grid">
+          <p class="lead">A curious builder with a fondness for expressive interfaces, thoughtful systems, and a little theatrical atmosphere.</p>
+          <p>Use this portfolio as your editable starting point. Replace the name, bio, links, work, and media in <code>script.js</code> and the <code>assets</code> folder. The site remains polished even without those optional files.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="section content-section reveal">
+        <p class="section-kicker">II. The arsenal</p>
+        <div class="section-heading"><h2>Things I command</h2><span class="rule"></span></div>
+        <div id="skill-list" class="skill-list"></div>
+      </section>
+
+      <section id="projects" class="section content-section reveal">
+        <p class="section-kicker">III. The archive</p>
+        <div class="section-heading"><h2>Selected works</h2><span class="rule"></span></div>
+        <div id="project-list" class="project-list"></div>
+      </section>
+
+      <section id="contact" class="section contact-section reveal">
+        <div class="contact-panel ornamented">
+          <p class="section-kicker">IV. The summoning</p>
+          <h2>Let’s make something <em>unforgettable.</em></h2>
+          <p>Open to interesting collaborations, ambitious side quests, and thoughtful conversations.</p>
+          <div id="social-links" class="social-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© <span id="year"></span> Your Name</span><span>Made under a crimson moon</span></footer>
+    <audio id="ambient-audio" loop preload="metadata"><source src="ambient.mp3" type="audio/mpeg" /></audio>
+    <script src="script.js"></script>
   </body>
 </html>
