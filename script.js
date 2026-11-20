@@ -1,6 +1,6 @@
 /* Edit this object to personalize the site. Leave a URL as '#' to hide its destination. */
 const portfolio = {
-  name: 'Akshat Awasthi',
+  name: 'AKSHAT AWASTHI',
   handle: '@dankakshat',
   skills: ['Creative direction', 'UI / UX design', 'Front-end development', 'Brand systems', 'Motion design', 'Worldbuilding'],
   projects: [
