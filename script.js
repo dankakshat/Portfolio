@@ -12,7 +12,7 @@ const portfolio = {
     { label: 'Email', url: 'mailto:akshatorignal@gmail.com' },
     { label: 'GitHub', url: 'https://github.com/dankakshat' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/dankakshat/' },
-    { label: 'Instagram', url: 'instagram.com/dankakshat' }
+    { label: 'Instagram', url: 'https://instagram.com/dankakshat' }
   ]
 };
 
