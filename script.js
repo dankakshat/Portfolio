@@ -2,11 +2,11 @@
 const portfolio = {
   name: 'AKSHAT AWASTHI',
   handle: '@dankakshat',
-  skills: ['Creative direction', 'UI / UX design', 'Front-end development', 'Brand systems', 'Motion design', 'Worldbuilding'],
+  skills: ['Python', 'C++', 'NumPy', 'pandas', 'Matplotlib', 'Data Structures & Algorithms', 'Data analysis', 'Machine learning foundations', 'Statistics & probability'],
   projects: [
-    { title: 'Nocturne', description: 'A cinematic identity and responsive digital home for a story-led creative project.', tags: ['Branding', 'Web design'], url: '#' },
-    { title: 'Glass Garden', description: 'An atmospheric product experience built to make a complex tool feel intimate and clear.', tags: ['Product', 'Interface'], url: '#' },
-    { title: 'Afterimage', description: 'A visual system and launch space for work that lives between digital craft and art direction.', tags: ['Art direction', 'Code'], url: '#' }
+    { title: 'Financial Data Explorer', description: 'A planned exploratory analysis of a public financial or economic dataset, focused on trends, distributions, data quality, and clear reporting.', tags: ['Python', 'pandas', 'Matplotlib'], url: '#', stage: 'PLANNED PROJECT' },
+    { title: 'Risk Signal Prototype', description: 'A planned classification or anomaly-detection prototype using public synthetic or anonymised data, with careful evaluation and error analysis.', tags: ['Python', 'scikit-learn', 'Evaluation'], url: '#', stage: 'PLANNED PROJECT' },
+    { title: 'Deployable ML Demo', description: 'A planned end-to-end model demo with a simple interface, input validation, setup notes, tests, and clearly documented limitations.', tags: ['ML engineering', 'APIs', 'Git'], url: '#', stage: 'PLANNED PROJECT' }
   ],
   social: [
     { label: 'Email', url: 'mailto:akshatorignal@gmail.com' },
@@ -26,7 +26,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 document.querySelector('#skill-list').innerHTML = portfolio.skills.map(skill => `<span class="skill">${skill}</span>`).join('');
 document.querySelector('#project-list').innerHTML = portfolio.projects.map((project, index) => `
   <article class="project">
-    <span class="project-number">ARCHIVE / 0${index + 1}</span>
+    <span class="project-number">${project.stage || `ARCHIVE / 0${index + 1}`}</span>
     <h3>${project.title}</h3><p>${project.description}</p>
     <div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
     <a href="${project.url}" ${project.url !== '#' ? 'target="_blank" rel="noreferrer"' : ''}>View project →</a>
