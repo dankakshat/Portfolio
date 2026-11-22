@@ -4,6 +4,7 @@ const portfolio = {
   handle: '@dankakshat',
   skills: ['Python', 'C++', 'NumPy', 'pandas', 'Matplotlib', 'Data Structures & Algorithms', 'Data analysis', 'Machine learning foundations', 'Statistics & probability'],
   projects: [
+    { title: 'Aurora Camera', description: 'A privacy-first Camera2 Android app with permission-gated live preview, rear/front switching, tap focus, zoom, JPEG capture, MediaStore saving, a thumbnail gallery, and a live capability panel.', tags: ['Kotlin', 'Jetpack Compose', 'Camera2', 'Android'], url: 'https://github.com/dankakshat/AURORA-cam', stage: 'BUILT · ANDROID' },
     { title: 'Financial Data Explorer', description: 'A planned exploratory analysis of a public financial or economic dataset, focused on trends, distributions, data quality, and clear reporting.', tags: ['Python', 'pandas', 'Matplotlib'], url: '#', stage: 'PLANNED PROJECT' },
     { title: 'Risk Signal Prototype', description: 'A planned classification or anomaly-detection prototype using public synthetic or anonymised data, with careful evaluation and error analysis.', tags: ['Python', 'scikit-learn', 'Evaluation'], url: '#', stage: 'PLANNED PROJECT' },
     { title: 'Deployable ML Demo', description: 'A planned end-to-end model demo with a simple interface, input validation, setup notes, tests, and clearly documented limitations.', tags: ['ML engineering', 'APIs', 'Git'], url: '#', stage: 'PLANNED PROJECT' }
