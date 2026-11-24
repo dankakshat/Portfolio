@@ -25,13 +25,49 @@ document.querySelector('footer span').innerHTML = `© <span id="year"></span> ${
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 document.querySelector('#skill-list').innerHTML = portfolio.skills.map(skill => `<span class="skill">${skill}</span>`).join('');
-document.querySelector('#project-list').innerHTML = portfolio.projects.map((project, index) => `
-  <article class="project">
-    <span class="project-number">${project.stage || `ARCHIVE / 0${index + 1}`}</span>
-    <h3>${project.title}</h3><p>${project.description}</p>
-    <div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
-    <a href="${project.url}" ${project.url !== '#' ? 'target="_blank" rel="noreferrer"' : ''}>View project →</a>
+const projectList = document.querySelector('#project-list');
+projectList.innerHTML = portfolio.projects.map((project, index) => `
+  <article class="project-card" style="--card-index:${index};--spread:${(index - 1.5)};--odd:${index % 2};--sign:${index < 2 ? -1 : 1}">
+    <button class="project-card-toggle" type="button" aria-label="Reveal ${project.title}">
+      <span class="project-card-inner">
+        <span class="project-face project-front" aria-hidden="true">
+          <span class="card-suit">✦</span>
+          <span class="card-mark">ARCHIVE / 0${index + 1}</span>
+          <strong>${project.title}</strong>
+          <span class="card-suit bottom">✦</span>
+        </span>
+        <span class="project-face project-back">
+          <span class="project-number">${project.stage || `ARCHIVE / 0${index + 1}`}</span>
+          <h3>${project.title}</h3><p>${project.description}</p>
+          <span class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</span>
+        </span>
+      </span>
+    </button>
+    ${project.url !== '#' ? `<a class="card-link" href="${project.url}" target="_blank" rel="noreferrer">View on GitHub ↗</a>` : '<span class="card-link card-link-muted">Repository coming soon</span>'}
   </article>`).join('');
+projectList.querySelectorAll('.project-card-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const card = toggle.closest('.project-card');
+    projectList.querySelectorAll('.project-card.is-flipped').forEach(c => { if (c !== card) c.classList.remove('is-flipped'); });
+    card.classList.toggle('is-flipped');
+  });
+});
+
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  projectList.classList.add('deck-dealt');
+} else {
+  projectList.classList.add('deck-ready');
+  const deckObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (!entry.isIntersecting || projectList.classList.contains('deck-dealt')) return;
+    projectList.classList.add('deck-shuffling');
+    setTimeout(() => {
+      projectList.classList.remove('deck-shuffling');
+      projectList.classList.add('deck-dealt');
+    }, 3200);
+    deckObserver.unobserve(projectList);
+  }), { threshold: .18 });
+  deckObserver.observe(projectList);
+}
 document.querySelector('#social-links').innerHTML = portfolio.social.map(link => `<a href="${link.url}" ${link.url.startsWith('http') ? 'target="_blank" rel="noreferrer"' : ''}>${link.label} ↗</a>`).join('');
 
 const audio = document.querySelector('#ambient-audio');
